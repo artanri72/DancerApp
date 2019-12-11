@@ -1,0 +1,125 @@
+[
+    {
+        "_id": {
+            "$oid": "552d2de1189e550300ffe536"
+        },
+        "filename": "Fur Elise",
+        "path": "/storage/emulated/0/Music/Rena/Beethoven-Fur Elise.mp3",
+        "created_by": {
+            "$oid": "551ee74eb09e8703004af9c3"
+        },
+        "duration": 177,
+        "device": {
+            "version": "5.0.2",
+            "platform": "Android",
+            "model": "HTCONE",
+            "id": "5405dec7952e11dc"
+        },
+        "device_id": "5405dec7952e11dc",
+        "is_active": true,
+        "date_modified": {
+            "$date": "2015-04-15T01:28:54.973Z"
+        },
+        "date_created": {
+            "$date": "2015-04-14T15:10:25.487Z"
+        },
+        "markers": [
+            0,
+            3,
+            34
+        ],
+        "__v": 0
+    },
+    {
+        "_id": {
+            "$oid": "552d7c8fb8f8e8030017ca9e"
+        },
+        "filename": "Manali Trance - The Shaukeens -Yo Yo Honey Singh [Full Song].m4a",
+        "path": "//var/mobile/Containers/Data/Application/927A88AE-5B7E-483F-808B-3678D9C670DB/Documents/Manali Trance - The Shaukeens -Yo Yo Honey Singh [Full Song].m4a",
+        "created_by": {
+            "$oid": "551ee74eb09e8703004af9c3"
+        },
+        "duration": 203,
+        "device": {
+            "version": "8.0",
+            "platform": "iOS",
+            "model": "iPhone5,3",
+            "id": "E274895B-FD4E-4B73-9912-048953DE4934"
+        },
+        "device_id": "E274895B-FD4E-4B73-9912-048953DE4934",
+        "is_active": true,
+        "date_modified": {
+            "$date": "2015-04-14T20:46:07.833Z"
+        },
+        "date_created": {
+            "$date": "2015-04-14T20:46:07.833Z"
+        },
+        "markers": [
+            0,
+            34,
+            65
+        ],
+        "__v": 0
+    },
+    {
+        "_id": {
+            "$oid": "552d835ce26afc0300960b2c"
+        },
+        "filename": "Kick - Yaar Naa Miley - KICK Movie Full Audio Song - Salman Khan - Yo Yo Honey Singh   Jasmine.m4a",
+        "path": "//var/mobile/Containers/Data/Application/E80299E6-2181-4397-8020-88EDC2289691/Documents/Kick - Yaar Naa Miley - KICK Movie Full Audio Song - Salman Khan - Yo Yo Honey Singh   Jasmine.m4a",
+        "created_by": {
+            "$oid": "551ee74eb09e8703004af9c3"
+        },
+        "duration": 243,
+        "device": {
+            "version": "8.0",
+            "platform": "iOS",
+            "model": "iPhone5,3",
+            "id": "0F097CF8-81C5-4420-922A-37A69B7D6A15"
+        },
+        "device_id": "0F097CF8-81C5-4420-922A-37A69B7D6A15",
+        "is_active": true,
+        "date_modified": {
+            "$date": "2015-04-15T07:06:44.925Z"
+        },
+        "date_created": {
+            "$date": "2015-04-14T21:15:08.309Z"
+        },
+        "markers": [
+            0,
+            31,
+            62
+        ],
+        "__v": 0
+    },
+    {
+        "_id": {
+            "$oid": "552da983be605f0300af2ec4"
+        },
+        "filename": "Tum hi ho",
+        "path": "/storage/emulated/0/Music/Rena/Tum Hi Ho - Aashiqui 2 - (Instrumental) ♫♥Heart Touching♥♫.mp3",
+        "created_by": {
+            "$oid": "551ee74eb09e8703004af9c3"
+        },
+        "duration": 262,
+        "device": {
+            "version": "5.0.2",
+            "platform": "Android",
+            "model": "HTCONE",
+            "id": "5405dec7952e11dc"
+        },
+        "device_id": "5405dec7952e11dc",
+        "is_active": true,
+        "date_modified": {
+            "$date": "2015-04-15T16:34:44.194Z"
+        },
+        "date_created": {
+            "$date": "2015-04-14T23:57:55.339Z"
+        },
+        "markers": [
+            0,
+            32
+        ],
+        "__v": 0
+    }
+]

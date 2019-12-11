@@ -1,0 +1,24 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "cordova-plugin-filepicker": {
+      "PACKAGE_NAME": "appv2.dancersq.com"
+    },
+    "cordova-plugin-file": {
+      "PACKAGE_NAME": "appv2.dancersq.com"
+    },
+    "cordova-plugin-media": {
+      "PACKAGE_NAME": "appv2.dancersq.com"
+    },
+    "cordova-plugin-googleplus": {
+      "PACKAGE_NAME": "appv2.dancersq.com"
+    }
+  },
+  "dependent_plugins": {}
+}

@@ -1,0 +1,24 @@
+<ion-header no-border>
+  <ion-navbar>
+    <ion-buttons end *ngIf="showSkip">
+      <button ion-button (click)="startApp()" color="primary">Skip</button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content no-bounce>
+  <ion-slides #slides (ionSlideWillChange)="onSlideChangeStart($event)" pager>
+
+    <ion-slide>
+      <!-- <img src="assets/img/ica-slidebox-img-1.png" class="slide-image"/> -->
+      <img src="assets/img/dancer-logos/logo.png" class="slide-image"/>
+      <h2 class="slide-title">
+        Welcome to <b>DancerQ</b>
+      </h2>
+      <button ion-button icon-end large clear (click)="startApp()">
+        Start
+        <ion-icon name="arrow-forward"></ion-icon>
+      </button>
+    </ion-slide>
+  </ion-slides>
+</ion-content>

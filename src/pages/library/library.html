@@ -1,0 +1,57 @@
+<ion-header>
+    <ion-navbar no-border-bottom>
+        <button ion-button menuToggle>
+          <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-toolbar no-border-top>
+            <ion-searchbar color="primary" [(ngModel)]="queryText" (ionInput)="updateSchedule()" placeholder="Search">
+            </ion-searchbar>
+        </ion-toolbar>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-refresher (ionRefresh)="doRefresh($event)">
+        <ion-refresher-content></ion-refresher-content>
+    </ion-refresher>
+
+    <!-- <ion-list #scheduleList [hidden]="shownSessions === 0"> -->
+    <ion-list #scheduleList [hidden]="shownSessions === 0">
+
+        <!-- <ion-item-group> -->
+
+        <!-- <ion-item-sliding *ngFor="let cue of cues" #slidingItem [hidden]="false">
+
+        <button ion-item (click)="playMedia(cue.id)">
+          <ion-thumbnail item-start class="item-thumbnail">
+            <img src="assets/img/music-icon/music-icon3.png">
+          </ion-thumbnail>
+          <h3>{{cue.filename}}</h3>
+          <p>
+            Markers: {{cue.markers.length}}
+          </p>
+        </button>
+
+      </ion-item-sliding> -->
+        <!-- </ion-item-group> -->
+        <ion-item *ngFor="let cue of cues" #slidingItem [hidden]="false">
+            <ion-thumbnail item-start>
+                <img class="cue-thumbnail-img" src="assets/img/music-icon/music-icon3.png">
+            </ion-thumbnail>
+            <h2>{{cue.filename}}</h2>
+            <p>Markers: {{cue.markers.length}}</p>
+            <button class="cue-btn cue-edit-btn" ion-button clear item-end (click)="editItem(cue)">
+        <ion-icon name="ios-create-outline"></ion-icon>
+      </button>
+            <button class="cue-btn cue-load-btn" ion-button clear item-end (click)="playMedia(cue.id)">
+        <ion-icon name="ios-arrow-dropright-outline"></ion-icon>
+      </button>
+        </ion-item>
+
+    </ion-list>
+
+    <ion-list-header [hidden]="shownSessions > 0">
+        No Sessions Found
+    </ion-list-header>
+
+</ion-content>

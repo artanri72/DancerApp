@@ -1,0 +1,73 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "cordova-plugin-background-mode": {
+      "PACKAGE_NAME": "appv2.dancersq.com"
+    },
+    "cordova-plugin-device": {
+      "PACKAGE_NAME": "appv2.dancersq.com"
+    },
+    "cordova-plugin-dialogs": {
+      "PACKAGE_NAME": "appv2.dancersq.com"
+    },
+    "cordova-plugin-facebook4": {
+      "APP_ID": "169648787215834",
+      "APP_NAME": "DancerQ",
+      "PACKAGE_NAME": "appv2.dancersq.com"
+    },
+    "cordova-plugin-filechooser": {
+      "PACKAGE_NAME": "appv2.dancersq.com"
+    },
+    "cordova-plugin-filepath": {
+      "PACKAGE_NAME": "appv2.dancersq.com"
+    },
+    "cordova-plugin-filepicker": {
+      "PACKAGE_NAME": "appv2.dancersq.com"
+    },
+    "cordova-plugin-inappbrowser": {
+      "PACKAGE_NAME": "appv2.dancersq.com"
+    },
+    "cordova-plugin-insomnia": {
+      "PACKAGE_NAME": "appv2.dancersq.com"
+    },
+    "cordova-plugin-ionic-keyboard": {
+      "PACKAGE_NAME": "appv2.dancersq.com"
+    },
+    "cordova-plugin-ionic-webview": {
+      "PACKAGE_NAME": "appv2.dancersq.com"
+    },
+    "cordova-plugin-music-controls": {
+      "PACKAGE_NAME": "appv2.dancersq.com"
+    },
+    "cordova-plugin-splashscreen": {
+      "PACKAGE_NAME": "appv2.dancersq.com"
+    },
+    "cordova-plugin-statusbar": {
+      "PACKAGE_NAME": "appv2.dancersq.com"
+    },
+    "cordova-plugin-uniquedeviceid": {
+      "PACKAGE_NAME": "appv2.dancersq.com"
+    },
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "appv2.dancersq.com"
+    },
+    "cordova-plugin-file": {
+      "PACKAGE_NAME": "appv2.dancersq.com"
+    },
+    "cordova-plugin-media": {
+      "KEEP_AVAUDIOSESSION_ALWAYS_ACTIVE": "NO",
+      "PACKAGE_NAME": "appv2.dancersq.com"
+    },
+    "cordova-plugin-googleplus": {
+      "REVERSED_CLIENT_ID": "com.googleusercontent.apps.1091054830917-2s0qa3nnm4l9iahuopj3pltdet50dk2j",
+      "PACKAGE_NAME": "appv2.dancersq.com"
+    }
+  },
+  "dependent_plugins": {}
+}

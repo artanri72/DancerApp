@@ -1,0 +1,134 @@
+page-music-player {
+    // .scroll-content {
+    //     // overflow-y:hidden;
+    // }
+    .music-player-content {
+        // background-image: radial-gradient(circle, #1c2737, #4c465e, #846780, #be8a9a, #f4b3ae);
+        // background-image: radial-gradient(circle, #727f92, #646271, #504850, #373133, #1d1c1c);
+        // background-image: linear-gradient(to top, #5f94e2, #0097c6, #21929f, #4f897c, #687d69);
+        background-image: linear-gradient(to bottom, rgba(96,108,136,1) 0%,rgba(63,76,107,1) 100%);
+    }
+    .player-controls {
+        background-color:#DFFDFF;
+    }
+    .time-display-container{
+        height:30px;
+        line-height: 15px;
+        color: white;
+        font-size:20px;
+    }
+    .time-display {
+        line-height: 13px;
+    }
+    .time-display.right {
+        padding-left: 5px;
+    }
+    .time-display.left {
+        padding-right: 5px;
+    }
+    .progress-bar {
+        width: 100%;
+    }
+    .progress-bar-container {
+        display: flex;
+    }
+    .progress-bar::-webkit-progress-value {
+        background-color: whiteSmoke;
+        background-image:
+             -webkit-linear-gradient(-45deg,
+                                     transparent 33%, rgba(0, 0, 0, .1) 33%,
+                                     rgba(0,0, 0, .1) 66%, transparent 66%),
+             -webkit-linear-gradient(top,
+                                     rgba(255, 255, 255, .25),
+                                     rgba(0, 0, 0, .25)),
+             -webkit-linear-gradient(left, #09c, #f44);
+
+          border-radius: 2px;
+          background-size: 35px 20px, 100% 100%, 100% 100%;
+    }
+    .progress-bar {
+    background-color: whiteSmoke;
+    border-radius: 2px;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.25) inset;
+
+
+    height: 20px;
+    margin-top: -5px;
+    // position: relative;
+    // display: block;
+    }
+
+    .progress-bar > span {
+    background-color: blue;
+    border-radius: 2px;
+
+    display: block;
+    text-indent: -9999px;
+    }
+    .audio-control {
+        font-size: 40px;
+    }
+    .add-maker-icon {
+        font-size: 30px;
+    }
+    .makers {
+        background-color: white;
+        margin-top: 10px;
+    }
+    .music-player-footer {
+        background-color:#616C85;
+    }
+    .color-red{
+        color: red;
+    }
+    .marker-wrapper {
+        width: 100%;
+    }
+    .marker-wrapper button{
+        padding:0 !important;
+        width:100%;
+    }
+    .cue-marker {
+        background-color:#f3cf2e;
+        color:black;
+        border-radius: 10px;
+        -webkit-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.30);
+        box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.30);
+    }
+    .selectedMarker {
+        background-color: #23b6ea;
+        color: black;
+        border-radius: 10px;
+    }
+    .markers {
+        margin-bottom: 20px;
+    }
+    .marker-button {
+        width:100%;
+        height: 100%;
+
+    }
+    .marker-order {
+        background-color: #edf1d1;
+        opacity: 0.8;
+        border-radius: 10px;
+    }
+    .marker-value {
+        padding-top:3px;
+    }
+
+    .repeat-active {
+        background-color: #22b6ea;
+    }
+    .longPress-button {
+        display: inline-flex;
+        position: absolute;
+        z-index: 20;
+        margin-top: 45px;
+        margin-left:0px;
+    }
+    .longPress-button button {
+        height:35px;
+        width: 100%;
+    }
+}

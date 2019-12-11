@@ -1,0 +1,56 @@
+// page-library {
+
+// }
+
+$categories: (
+ ionic: color($colors, primary),
+ angular: #AC282B,
+ communication: #8E8D93,
+ tooling: #FE4C52,
+ services: #FD8B2D,
+ design: #FED035,
+ workshop: #69BB7B,
+ food: #3BC7C4,
+ documentation: #B16BE3,
+ navigation: #6600CC,
+);
+
+@function auxiliary-categories() {
+  @return map-remove($categories);
+}
+
+page-schedule {
+  @each $track, $value in auxiliary-categories() {
+   ion-item-sliding[track=#{$track}] ion-label {
+     border-left: 2px solid $value;
+     padding-left: 10px;
+   }
+  }
+
+  // .ion-thumbnail img{
+  //   height: 40px !important;
+  //   width: 40px !important;
+  // }
+ 
+  img.cue-thumbnail-img {
+    height: 40px !important;
+    width: 40px !important;
+  }
+  
+}
+.cue-btn {
+  margin:0px !important;
+  height:40px !important;
+  width:40px !important;
+}
+.cue-edit-img {
+  width:40px !important;
+}
+.cue-edit-btn {
+  font-size: 35px !important;
+  color: black;
+}
+.cue-load-btn {
+  font-size: 35px !important;
+  color: black;
+}

@@ -1,0 +1,44 @@
+
+<ion-content>
+	<form #loginForm="ngForm" novalidate class="loginform">
+		<div class="logo">
+			<img src="assets/img/dancer-logos/logo.png">
+		</div>
+		<ion-list no-lines >
+			<ion-item>
+				<ion-label floating color="primary">E-mail address</ion-label>
+				<ion-input [(ngModel)]="login.email" name="email" type="text" #email="ngModel" spellcheck="false" autocapitalize="off" required>
+				</ion-input>
+				<ion-icon name="md-eye" item-right class="loginform-placeholder-icon"></ion-icon>
+			</ion-item>
+			<p ion-text [hidden]="email.valid || submitted == false" color="danger" padding-left>
+				Username is required
+			</p>
+
+			<ion-item>
+				<ion-label floating color="primary">Password</ion-label>
+				<ion-input [(ngModel)]="login.password" name="password" type="password" #password="ngModel" required>
+				</ion-input>
+				<ion-icon name="ios-key" item-right class="loginform-placeholder-icon"></ion-icon>
+			</ion-item>
+			<p ion-text [hidden]="password.valid || submitted == false" color="danger" padding-left>
+				Password is required
+			</p>
+		</ion-list>
+
+		<ion-row responsive-sm>
+			<ion-col>
+				<button ion-button (click)="onLogin(loginForm)" type="submit" block>Login</button>
+			</ion-col>
+		</ion-row>
+		<ion-row responsive-sm>
+			<ion-col text-center color="stable">
+				<p class="forgot-password" (click)="forgotPassword()">Forgot Password?</p>
+			</ion-col>
+			<ion-col text-center color="stable">
+				<p class="sign-up forgot-password" (click)="onSignup()">New here? Sign Up</p>
+			</ion-col>
+		</ion-row>
+	</form>
+
+</ion-content>

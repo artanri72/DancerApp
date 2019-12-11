@@ -1,0 +1,125 @@
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+        <ion-title>DancersQ</ion-title>
+    </ion-navbar>
+    <div class="music-control-panel">
+        <div class="progress-container">
+            <ion-row class="time-display-container" responsive-sm>
+                <ion-col col-12 class="filename" text-center>
+                    <marquee>{{cue.filename}}</marquee>
+                </ion-col>
+            </ion-row>
+            <ion-row class="progress-bar">
+                <ion-col col-12 class="progress-bar-container">
+                    <div class="time-display left" text-center>
+                        {{ convertMinutes(fileDuration) | number:'2.0-0' ||0}}:{{ convertSeconds((fileDuration/1000).toFixed()) | number:'2.0-0' ||0}}
+                    </div>
+                    <progress class="progress-bar" max={{fileDuration||0}} value={{timeElapsed}}></progress>
+                    <div class="time-display right" text-center>
+                        {{ convertMinutes(timeElapsed) | number:'2.0-0' ||0}}:{{ convertSeconds((timeElapsed/1000).toFixed()) | number:'2.0-0' ||0}}
+                    </div>
+                </ion-col>
+            </ion-row>
+        </div>
+        <div class="player-controls">
+            <ion-row>
+                <ion-col col-2>
+                    <button (click)="mediaSkip(-30)" ion-button color="dark" block>
+            <ion-icon name="ios-skip-backward"></ion-icon>&nbsp;30</button>
+                </ion-col>
+                <ion-col col-2>
+                    <button (click)="mediaSkip(-10)" ion-button color="dark" block>
+            <ion-icon name="md-arrow-dropleft"></ion-icon>&nbsp;10</button>
+                </ion-col>
+                <ion-col col-4>
+                    <button (click)="capturePosition()" ion-button color="danger" block>
+            <ion-icon class="add-maker-icon" name="md-add-circle"></ion-icon>
+          </button>
+                </ion-col>
+                <ion-col col-2>
+                    <button (click)="mediaSkip(10)" ion-button color="dark" block>10&nbsp;
+            <ion-icon name="md-arrow-dropright"></ion-icon>
+          </button>
+                </ion-col>
+                <ion-col col-2>
+                    <button (click)="mediaSkip(30)" ion-button color="dark" block>30&nbsp;
+            <ion-icon name="ios-skip-forward"></ion-icon>
+          </button>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col col-4>
+                    <button (click)="mediaStop()" class="btn-stop " ion-button color="dark" outline block>
+            <ion-icon class="audio-control" name="ios-square"></ion-icon>
+          </button>
+                </ion-col>
+                <ion-col col-4>
+                    <button *ngIf="!playBtnStatus" (click)="playMedia()" class="btn-play " ion-button color="danger" outline block>
+            <ion-icon class="audio-control" name="ios-play"></ion-icon>
+          </button>
+                    <button *ngIf="playBtnStatus" (click)="playMedia()" class="btn-play " ion-button color="danger" outline block>
+            <ion-icon [hidden]="mStatus == 2" class="audio-control" name="ios-play"></ion-icon>
+            <ion-icon [hidden]="mStatus != 2" class="audio-control" name="ios-pause"></ion-icon>
+          </button>
+                </ion-col>
+                <ion-col col-2>
+                    <button (click)="replay()" class="btn-refresh " ion-button color="dark" outline block>
+            <ion-icon class="audio-control" name="ios-refresh"></ion-icon>
+          </button>
+                </ion-col>
+                <ion-col col-2>
+                    <button (click)="repeat()" class="btn-refresh " [ngClass]="{'repeat-active': repeatBtnStatus == true }" ion-button color="dark" outline block>
+            <ion-icon class="audio-control" name="ios-repeat"></ion-icon>
+          </button>
+                </ion-col>
+            </ion-row>
+        </div>
+    </div>
+</ion-header>
+
+<ion-content class="music-player-content">
+    <div class="player-container">
+        <div class="markers">
+            <ion-row col-12>
+                <ion-col col-3 *ngFor="let marker of cue.markers; let i = index">
+                    <div class="longPress-button" *ngIf="cuePopupStatus == true && cuePopupIndex == i">
+                        <button (click)="cuePopup('left',i)" ion-button icon-left block color="light" class="color-red" block>
+              <ion-icon name="ios-arrow-back"></ion-icon>
+            </button>
+                        <button (click)="cuePopup('right',i)" ion-button icon-left block color="light" class="color-red" block>
+              <ion-icon name="ios-arrow-forward"></ion-icon>
+            </button>
+                    </div>
+                    <div class="marker-wrapper" *ngIf=" marker != -1">
+                        <button positionV="bottom" ion-button class="cue-marker" [ngClass]="{'selectedMarker': selectedMarker == marker}" (click)="selectMarker(marker,i)" (swipe)="markerOnDragLeft(marker)" (press)="longPress(i,marker)">
+              <div class="marker-button">
+                <div class="marker-order">
+                  <span class="cue-order">{{i + 1}}</span>
+                </div>
+                <div class="marker-value">
+                  <span>{{ convertMinutes(marker*1000) | number:'2.0-0' ||0}}:{{ convertSeconds(marker.toFixed()) | number:'2.0-0'
+                    ||0}}
+                  </span>
+                </div>
+              </div>
+            </button>
+                    </div>
+                </ion-col>
+            </ion-row>
+        </div>
+    </div>
+
+</ion-content>
+<ion-footer class="music-player-footer">
+    <ion-fab bottom right #fab>
+        <button ion-fab><ion-icon name="arrow-dropleft"></ion-icon></button>
+        <ion-fab-list side="left">
+            <button ion-fab (click)="save(fab)"><ion-icon name="ios-document"></ion-icon></button>
+            <button ion-fab (click)="chooseFile(fab)"><ion-icon name="md-arrow-round-up"></ion-icon></button>
+            <button ion-fab (click)="clearMarkers(fab)"><ion-icon name="trash"></ion-icon></button>
+        </ion-fab-list>
+    </ion-fab>
+</ion-footer>

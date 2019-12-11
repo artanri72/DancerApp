@@ -1,0 +1,4 @@
+#!/bin/sh
+rm -rf plugins
+rm -rf platforms
+cordova platform add ios
